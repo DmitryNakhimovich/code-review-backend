@@ -4,15 +4,10 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "code-review-backend",
-        "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "uri": "mongodb+srv://admin:(Z)aw2-Da@code-review-7jfja.gcp.mongodb.net/code-review?retryWrites=true&w=majority"
       },
       "options": {
-        "authenticationDatabase": ""
+        "ssl": true
       }
     }
   }
