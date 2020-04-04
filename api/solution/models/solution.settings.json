@@ -1,0 +1,52 @@
+{
+  "connection": "default",
+  "collectionName": "solutions",
+  "info": {
+    "name": "Solution"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "answerText": {
+      "type": "richtext"
+    },
+    "createDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "updateDate": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "submited",
+        "inReview",
+        "needWork",
+        "done"
+      ],
+      "default": "submited",
+      "required": true
+    },
+    "AnswerFile": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "lesson": {
+      "model": "lessons",
+      "via": "solutions"
+    },
+    "solution_comments": {
+      "via": "solution",
+      "collection": "solution-comment"
+    }
+  }
+}

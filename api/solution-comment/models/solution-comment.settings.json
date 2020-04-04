@@ -1,0 +1,21 @@
+{
+  "info": {
+    "name": "Solution_Comment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "solution": {
+      "model": "solution",
+      "via": "solution_comments"
+    }
+  },
+  "connection": "default",
+  "collectionName": "solution_comments"
+}
