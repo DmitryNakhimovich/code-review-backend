@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "lessons",
+  "info": {
+    "name": "Lesson"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "EndDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "StartDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "course": {
+      "via": "lessons",
+      "model": "courses"
+    },
+    "solutions": {
+      "via": "lesson",
+      "collection": "solution"
+    }
+  }
+}

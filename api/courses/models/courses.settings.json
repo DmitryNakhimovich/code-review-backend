@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 30
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "lessons": {
+      "collection": "lessons",
+      "via": "course"
+    },
+    "users": {
+      "via": "courses",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
