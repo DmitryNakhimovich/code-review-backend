@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "users-permissions_user",
   "info": {
@@ -54,8 +55,8 @@
       "configurable": false
     },
     "courses": {
-      "collection": "courses",
       "via": "users",
+      "collection": "courses",
       "dominant": true
     }
   }
